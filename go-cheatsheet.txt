@@ -25,3 +25,5 @@ In Go, a function whose name starts with a capital letter can be called by a fun
 This is known in Go as an exported name.
 
 nil means no error 
+
+a slice in Go is a dynamically sized array. 
