@@ -1,0 +1,16 @@
+Links:
+https://pkg.go.dev/                 -- find go packages
+https://go.dev/doc/effective_go     -- best practices
+
+Terminal Commands:
+
+$ go run fileName.go  -- compile and run (deletes executable)
+$ go build fileName.go -- compile and run (leaves executable)
+
+$ go mod tidy -- ensures go.mod and go.sum are clean and accurate 
+
+^It adds any missing module requirements necessary to build the current module's packages and dependencies.
+^It removes unused modules that don't provide any relevant packages.
+^It adds new or missing entries to go.sum for all dependencies.
+
+NOTE: Remember to run this command whenever you add, remove, or change your code's dependencies.
