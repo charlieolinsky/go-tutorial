@@ -12,8 +12,8 @@ func main() {
 	log.SetPrefix("greetings: ") //Add a suffix to the logger
 	log.SetFlags(0)              //Disable default printing of time, source file, and line number.
 
-	// Request a greeting message.
-	message, err := greetings.Hello("Charlie")
+	// Request several greeting messages.
+	message, err := greetings.Hellos([]string{"Charlie", "Erica", "Victor"})
 
 	// If an error was returned, print it to the console and exit the program.
 	if err != nil {
@@ -21,5 +21,8 @@ func main() {
 	}
 
 	// If no error was returned, print the returned message to the console.
-	fmt.Println(message)
+	//fmt.Println(message)
+	for _, msg := range message {
+		fmt.Println(msg)
+	}
 }
