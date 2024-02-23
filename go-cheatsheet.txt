@@ -12,6 +12,13 @@ $ go build fileName.go -- compile and run (leaves executable)
 $ go mod tidy -- ensures go.mod and go.sum are clean and accurate 
 NOTE: Remember to run this command whenever you add, remove, or change your code's dependencies.
 
+$ go build -- compile code into an executable (dont't install the results)
+
+$ go list -f '{{.Target}}'  -- Discover the install path
+$ set PATH=$PATH:/path/to/your/install/directory -- Add the Go install directory to your system's shell path
+$ go install -- compile and install the package
+
+
 
 Operators:
 In Go, the := operator is a shortcut for declaring and initializing a variable in one line (Go uses the value on the right to determine the variable's type).
@@ -27,6 +34,8 @@ This is known in Go as an exported name.
 nil means no error 
 
 a slice in Go is a dynamically sized array. 
+
+installing an executable allows you to run it without specifying its path.
 
 Testing Info:
 -ending a file using _test.go tells the go test command that this file contains test functions.
