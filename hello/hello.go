@@ -9,7 +9,7 @@ import (
 
 func main() {
 	/* Set properties of the predefined Logger */
-	log.SetPrefix("greetings: ") //Add a suffix to the logger
+	log.SetPrefix("greetings: ") //Add a prefix to the logger
 	log.SetFlags(0)              //Disable default printing of time, source file, and line number.
 
 	// Request several greeting messages.
@@ -21,8 +21,8 @@ func main() {
 	}
 
 	// If no error was returned, print the returned message to the console.
-	//fmt.Println(message)
-	for _, msg := range message {
-		fmt.Println(msg)
+	for name, msg := range message {
+		fmt.Println("Key: ", name)
+		fmt.Println("Val: ", msg)
 	}
 }

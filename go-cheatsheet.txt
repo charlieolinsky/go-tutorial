@@ -27,3 +27,12 @@ This is known in Go as an exported name.
 nil means no error 
 
 a slice in Go is a dynamically sized array. 
+
+Testing Info:
+-ending a file using _test.go tells the go test command that this file contains test functions.
+-Test function names have the form TestName, where Name says something about the specific test.
+-test functions take a pointer to the testing package's testing.T type. 
+ You use this parameter's methods for reporting and logging from your test
+  ==> func TestHelloName(t *testing.T) {} 
+
+  - go test -v  ==>  You can add the -v flag to get verbose output that lists all of the tests and their results

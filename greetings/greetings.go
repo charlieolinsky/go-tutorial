@@ -13,6 +13,7 @@ func Hello(name string) (string, error) {
 
 	//Returns a greeting that embeds the name in a message.
 	message := fmt.Sprintf(randomFormat(), name)
+	//message := fmt.Sprint(randomFormat()) //BREAK ON PURPOSE
 	return message, nil
 }
 
